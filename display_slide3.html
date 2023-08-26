@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <link rel="stylesheet" href="display_slide.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div>
+        <div class="menu-icon" onclick="toggleOverlay()">&#9776;</div>
+        <div class="logo">
+            <a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp; AnnotateScope</a>
+        </div></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"> &nbsp; &nbsp; &nbsp;</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="overlay" id="overlay">
+        <div class="close-btn" style="color: azure;" onclick="toggleOverlay()">&times;</div>
+        <div class="list-title">Select slide</div>
+        <hr>
+        <div class="link-list">
+            <a href="display_slide1.html">Lung Slide</a>
+            <a href="display_slide2.html">Slide 2</a>
+            <a href="display_slide3.html">Slide 3</a>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="text-container">
+            <div class="primary-line">Work in progress!!</div>
+            <div class="secondary-line">Select one of the slides from the menu to view them</div>
+        </div>
+    </div>
+</body>
+</html>

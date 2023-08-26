@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slide</title>
+    <link rel="stylesheet" href="display_slide.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div>
+        <div class="menu-icon" onclick="toggleOverlay()">&#9776;</div>
+        <div class="logo">
+            <a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp; AnnotateScope</a>
+        </div></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Features</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#"> &nbsp; &nbsp; &nbsp;</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="overlay" id="overlay">
+        <div class="close-btn" style="color: azure;" onclick="toggleOverlay()">&times;</div>
+        <div class="list-title">Select slide</div>
+        <hr>
+        <div class="link-list">
+            <a href="display_slide1.html">Lung Slide</a>
+            <a href="display_slide2.html">Slide 2</a>
+            <a href="display_slide3.html">Slide 3</a>
+            <!-- Add more images as needed -->
+        </div>
+    </div>
+    <div class="content-container">
+        <div class="image-container" id="image-container">
+            <img src="slides/1.jpg" alt="Centered Image" id="zoomable-image">
+            <div class="marker" style="top: 40%; left: 27%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Stratum Corneum</div></div>
+            <div class="marker" style="top: 55%; right: 37%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Stratum Lucidum</div></div>
+            <div class="marker" style="top: 50%; right: 57%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Stratum Granulosum</div></div>            
+            <div class="marker" style="top: 65%; right: 25%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Stratum Spinosum</div></div>            
+            <div class="marker" style="top: 80%; left: 15%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Stratum Basale</div></div>
+            <div class="marker" style="bottom: 32%; right: 8%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Papilary Dermis</div></div>            
+            <div class="marker" style="top: 35%; right: 25%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Duct of sweat gland</div></div>             
+            <div class="marker" style="bottom: 10%; right: 22%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Sweat gland</div></div>             
+            <div class="marker" style="bottom: 8%; left: 25%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Collagen fibres</div></div>             
+            <div class="marker" style="top: 85%; left: 45%;"><div class="label-text">&nbsp;&nbsp;&nbsp;Blood vessel</div></div> 
+        </div>
+    </div>
+
+</body>
+</html>
