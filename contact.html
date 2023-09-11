@@ -10,7 +10,7 @@
   <meta name="description" content="">
   
   
-  <title>Home</title>
+  <title>Contact us</title>
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons2/mobirise2.css">
   <link rel="stylesheet" href="assets/web/assets/mobirise-icons/mobirise-icons.css">
   <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -19,9 +19,11 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/socicon/css/styles.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
   <link rel="preload" href="https://fonts.googleapis.com/css?family=Lexend:100,200,300,400,500,600,700,800,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lexend:100,200,300,400,500,600,700,800,900&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   
   
@@ -66,7 +68,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 col-md-6 image-wrapper">
-                <img class="w-100" src="assets/images/img20230204111427-1-1256x1675.jpeg" alt="Mobirise Website Builder">
+                <img class="w-100" style="border-radius: 3%;" src="assets/images/img20230204111427-1-1256x1675.jpeg" alt="Profile">
             </div>
             <div class="col-12 col-md">
                 <div class="text-wrapper text-center">
@@ -140,7 +142,7 @@
         <div class="row align-items-center">
             <div class="col-12 col-lg-5">
                 <div class="image-wrapper">
-                    <img src="assets/images/mbr-3.jpeg" alt="Mobirise Website Builder">
+                    <img src="assets/images/mbr-3.jpeg" style="border-radius: 5%;opacity: 0.85;" alt="Profile">
                     
                 </div>
             </div>
@@ -320,7 +322,7 @@
         <div class="row content-wrapper justify-content-center">
             <div class="col-lg-4 offset-lg-1 mbr-form">
 <!--Formbuilder Form-->
-<form action="mailto:bharathidhanajaya@gmail.com" method="POST" class="mbr-form form-with-styler">
+<form id="contactForm" class="mbr-form form-with-styler">
 <div class="row">
 
 <div hidden="hidden" data-form-alert-danger="" class="alert alert-danger col-12">Oops...! some problem!</div>
@@ -398,7 +400,44 @@
             
         </div>
     </div>
-</section><script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>  <script src="assets/theme/js/script.js"></script>  
+</section>
+
+<script>
+    $(document).ready(function () {
+      $("#contactForm").submit(function (event) {
+        event.preventDefault();
+  
+        // Collect form data ?usp=pp_url&=name&=email&=message
+        var formData = {
+          "entry.643639363": $("#name").val(),
+          "entry.221894896": $("#email").val(),
+          "entry.968766225": $("#message").val()
+          // Map form fields to Google Form entry IDs
+        };
+  
+        // Send data to Google Forms
+        $.ajax({
+          url: "https://docs.google.com/forms/d/e/1FAIpQLScz6vFz3vr3O0WtPMWq9vAj93rTnNEJbb81hePjT1quqsGNJA/viewform?usp=pp_url", // Replace with your Google Form URL
+          type: "POST",
+          data: formData,
+          dataType: "xml", // or "json" if preferred
+          statusCode: {
+            0: function () {
+              // Success
+              alert("Form submitted successfully!");
+            },
+            200: function () {
+              // Success
+              alert("Form submitted successfully!");
+            },
+          },
+        });
+      });
+    });
+  </script>
+  
+
+<script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>  <script src="assets/smoothscroll/smooth-scroll.js"></script>  <script src="assets/ytplayer/index.js"></script>  <script src="assets/dropdown/js/navbar-dropdown.js"></script>  <script src="assets/vimeoplayer/player.js"></script>  <script src="assets/mbr-switch-arrow/mbr-switch-arrow.js"></script>  <script src="assets/theme/js/script.js"></script>  
   
   
 </body>
