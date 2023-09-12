@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnnotateScope Features</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <link rel="stylesheet" href="features.css">
+</head>
+<body>
+    <header class="navbar">
+        <div>
+        <div class="logo">
+            <a href="index.html">&nbsp;&nbsp;&nbsp;&nbsp; AnnotateScope</a>
+        </div></div>
+        <nav>
+            <ul>
+                <li><a href="display_slide.html">Home</a></li>
+                <li><a href="features.html">Features</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="#"> &nbsp; &nbsp; &nbsp;</a></li>
+            </ul>
+        </nav>
+    </header>
+       
+<section class="features-container">
+    <div id="slideshow-container">
+        <div class="slide">
+            <img src="features/Slide1.JPG" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="features/Slide2.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide3.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide4.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide5.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide6.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide7.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide8.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide9.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide10.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide11.JPG" alt="Image 2">
+        </div>
+        <div class="slide">
+            <img src="features/Slide12.JPG" alt="Image 2">
+        </div>
+        <!-- Add more images here -->
+
+        <span id="left-arrow" class="arrow" onclick="prevSlide()">&#10094;</span>
+        <span id="right-arrow" class="arrow" onclick="nextSlide()">&#10095;</span>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(slideIndex) {
+            if (slideIndex >= slides.length) {
+                currentSlide = 0;
+            } else if (slideIndex < 0) {
+                currentSlide = slides.length - 1;
+            }
+
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.style.display = 'block';
+                } else {
+                    slide.style.display = 'none';
+                }
+            });
+        }
+
+        function nextSlide() {
+            currentSlide++;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide--;
+            showSlide(currentSlide);
+        }
+
+        // Initial display
+        showSlide(currentSlide);
+    </script>
+</section>
+
+    <footer>
+        <p>&copy; 2023 AnnotateScope. All rights reserved.</p>
+    </footer>
+</body>
+</html>
