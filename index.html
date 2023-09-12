@@ -19,6 +19,31 @@
 				<li><a href="features.html">FEATURES</a></li>
 				<li><a href="contact.html">CONTACT US</a></li>
 				<li class="last"><a href="https://github.com/mohit-nagaraj/AnnotateScope/wiki">DOCUMENTATION</a></li>
+<<<<<<< Updated upstream
+=======
+				<audio id="myAudio">
+					<source src="https://audio.jukehost.co.uk/XzOYAxxarAqudUqGBNUVh1QrYe90lXTs" type="audio/mpeg">
+				</audio>
+				
+				<button id="toggleAudio" aria-label="Toggle Audio" style="position: fixed;width: 35px ;border-radius: 20px; padding: 8px;margin-left: 8px;color: rgb(0, 156, 173);background-color: rgba(255, 255, 255, 0.65);border-color: rgba(0, 255, 255, 0.515);">
+					<i class="fas fa-volume-off"></i>
+				</button>
+				
+				<script>
+					var audio = document.getElementById('myAudio');
+					var toggleButton = document.getElementById('toggleAudio');
+				
+					toggleButton.addEventListener('click', function() {
+						if (audio.paused) {
+							audio.play();
+							toggleButton.innerHTML = '<i class="fas fa-volume-up"></i>';
+						} else {
+							audio.pause();
+							toggleButton.innerHTML = '<i class="fas fa-volume-off"></i>';
+						}
+					});
+				</script>
+>>>>>>> Stashed changes
 			</ul>
 		</div>
 		<div class="heading">
