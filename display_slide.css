@@ -165,7 +165,7 @@ body {
     position: absolute;
     width: 10px;
     height: 10px;
-    background-color: red;
+    background-color: black;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     opacity: 0.5; /* Hide markers by default */
